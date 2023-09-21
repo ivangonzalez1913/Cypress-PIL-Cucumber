@@ -1,0 +1,32 @@
+{
+  "name": "cypress-pil-cucumber",
+  "version": "1.0.0",
+  "description": "test utilizando cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivangonzalez1913/Cypress-PIL-Cucumber.git"
+  },
+  "keywords": [
+    "test",
+    "cucumber",
+    "automation"
+  ],
+  "author": "Ivan Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivangonzalez1913/Cypress-PIL-Cucumber/issues"
+  },
+  "homepage": "https://github.com/ivangonzalez1913/Cypress-PIL-Cucumber#readme",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.6",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^13.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/step_definitions/*.js"
+  }
+}
