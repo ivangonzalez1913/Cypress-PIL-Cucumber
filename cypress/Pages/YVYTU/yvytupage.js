@@ -16,6 +16,13 @@ class Yvytu {
   getSubtitle() {
     return cy.get("#reserva .text-2xl");
   }
+  getCabanaTitle() {
+    return cy.get("#cabana h3");
+  }
+  getCabanaInfo() {
+    return cy.get('div[class="flex flex-col font-normal"]');
+  }
+  get;
 }
 
 module.exports = new Yvytu();
