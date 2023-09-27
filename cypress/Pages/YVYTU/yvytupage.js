@@ -10,6 +10,12 @@ class Yvytu {
   getImgButton() {
     return cy.get("ul").first().find("li button");
   }
+  getButton() {
+    return cy.get("#btn-scroll-top");
+  }
+  getSubtitle() {
+    return cy.get("#reserva .text-2xl");
+  }
 }
 
 module.exports = new Yvytu();

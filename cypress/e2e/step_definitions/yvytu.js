@@ -1,4 +1,5 @@
-import { Then } from "@badeball/cypress-cucumber-preprocessor";
+import { Then, When } from "@badeball/cypress-cucumber-preprocessor";
+
 const yvytupage = require("../../Pages/YVYTU/yvytupage");
 Then(`visualiza en el header los botones {string}`, (list) => {
   list = list.split(", ");
@@ -31,4 +32,18 @@ Then(`se visualizan las imagenes {string} en el banner`, (imgList) => {
         }
       });
   });
+});
+Then(`el boton {string} no se visualiza`, (btnName) => {
+  yvytupage.getButton().contains(btnName).should("not.be.visible");
+});
+Then(`el boton {string} se visualiza`, (btnName) => {
+  yvytupage.getButton().contains(btnName).should("be.visible");
+});
+
+When(`el usuario hace scroll hasta {string}`, (scrollToViewTxt) => {
+  yvytupage.getSubtitle().contains(scrollToViewTxt).scrollIntoView();
+});
+
+When(`el usuario hace click en el boton {string}`, (btnName) => {
+  yvytupage.getButton().contains(btnName).click();
 });
