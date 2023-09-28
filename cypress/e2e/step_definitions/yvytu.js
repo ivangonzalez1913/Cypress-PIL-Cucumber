@@ -64,3 +64,16 @@ Then(
       });
   }
 );
+
+Then(`leo la siguiente tabla aplicando Hashes`, (table) => {
+  table = table.hashes();
+  cy.log(table);
+  yvytupage
+    .getCabanaInfo()
+    .find("span")
+    .each((el, $inx) => {
+      cy.wrap(el).then((span) => {
+        cy.wrap(span).should("contain.text", table[$inx].info);
+      });
+    });
+});

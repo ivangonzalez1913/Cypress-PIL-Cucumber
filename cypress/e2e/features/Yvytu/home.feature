@@ -18,3 +18,15 @@ Feature: Home Yvytu
         When el usuario scrollea hasta "Nuestras cabañas"
         Then se verifica que la cabaña "1" llamada "Yaguareté" posee las siguientes caracteristicas "Para 4 personas, 2 habitaciones, Baño con ducha, Ropa de cama, Wi-fi, Aire acondicionado"
         And se verifica que la cabaña "2" llamada "Arasari" posee las siguientes caracteristicas "Para 4 personas, 2 habitaciones, Baño con ducha, Ropa de cama, Wi-fi"
+@focus
+    Scenario: Verificar cabañas tabla hashes
+        Given que un usuario esta en la pagina "Yvytu"
+        When el usuario scrollea hasta "Nuestras cabañas"
+        Then leo la siguiente tabla aplicando Hashes
+        | img   | info |
+        |  1  | Para 4 personas  |
+        |  2  | 2 habitaciones  |
+        |  3  | Baño con ducha  |
+        |  4  | Ropa de cama  |
+        |  5  | Wi-fi  |
+        |  6  | Aire acondicionado  |
