@@ -20,3 +20,14 @@ Then(
     });
   }
 );
+
+Then(`se visualiza la imagen {string}`, (altText) => {
+  copaArgentinaHome
+    .getGenericImg()
+    .filter(altText)
+    .should(
+      "have.attr",
+      "src",
+      "https://copaargentina.s3.amazonaws.com/images/m103810_crop1002_255x191_proportional_1580209938E21B.png"
+    );
+});

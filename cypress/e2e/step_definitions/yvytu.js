@@ -1,9 +1,6 @@
 import { Then, When } from "@badeball/cypress-cucumber-preprocessor";
 
 const yvytupage = require("../../Pages/YVYTU/yvytupage");
-When(`el usuario scrollea hasta {string}`, (scrollToViewTxt) => {
-  cy.contains(scrollToViewTxt).scrollIntoView();
-});
 
 When(`el usuario hace click en el boton {string}`, (btnName) => {
   yvytupage.getButton().contains(btnName).click();

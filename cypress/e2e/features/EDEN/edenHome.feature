@@ -9,8 +9,7 @@ Feature: Home Eden
         And hace click en la sugerencia "Creepy Halloween/La Mona Jimenez"
         Then se verifica que el nombre es "Creepy Halloween/ La Mona Jimenez "
         And la fecha es "27" de "octubre" a las "22:00 Hs"
-        @focus 
-        Scenario: Verificar precio cuarteto
+    Scenario: Verificar precio cuarteto
         Given que un usuario esta en la pagina "Eden"
         When hace click en el boton del header "CUARTETOS"
         And hace click en el boton "1" Ver
