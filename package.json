@@ -4,7 +4,8 @@
   "description": "test utilizando cucumber",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "cypress:run:todos": "npx cypress run --e2e --browser chrome -e \"tags=not @ignore\" -s cypress/e2e/features/**/*.feature"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,18 @@
     "cypress": "^13.2.0"
   },
   "cypress-cucumber-preprocessor": {
-    "stepDefinitions": "cypress/e2e/step_definitions/*.js"
+    "stepDefinitions": "cypress/e2e/step_definitions/*.js",
+    "html": {
+      "enabled": true,
+      "output": "reports/cucumber-report.html"
+    },
+    "messages": {
+      "enabled": true,
+      "output": "reports/messages.ndjson"
+    },
+    "json": {
+      "enabled": true,
+      "output": "reports/log.json"
+    }
   }
 }

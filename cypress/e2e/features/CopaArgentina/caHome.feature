@@ -13,7 +13,7 @@ Feature: Copa Argentina Home
         |background-color|rgba(0, 0, 0, 0) |
         |font-family|"News Cycle"|
          |font-size|11px|
-@focus
+
     Scenario: Verificar sponsor
     Given que un usuario esta en la pagina "CopaArgentina"
     When el usuario scrollea hasta "Main Sponsor"
