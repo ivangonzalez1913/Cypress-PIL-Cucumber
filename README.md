@@ -2,9 +2,17 @@
 
 Test utilizando cucumber
 
+# Dependencias
+
+Para la realizacion de los test se instalaron las siguientes dependencias:
+
+- @badeball/cypress-cucumber-preprocessor@18.0.6
+- @bahmutov/cypress-esbuild-preprocessor@2.2.0
+- cypress@13.2.0
+
 # Reporte
 
-El reporte, para todos los test, se genera utilizando el comando "cypress:run:todos".
+Para el reporte se utilizo cucumber-report.html. Se genera utilizando el comando "cypress:run:todos".
 
 # Test Eden
 
