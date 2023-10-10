@@ -21,6 +21,7 @@ Para realizar el reporte se utilizo el reporter basico de cucumber.
 Configuracion:
 
 1. Verificar dentro de _cypress-cucumber-preprocessor_ en **package.json** los siguientes valores:
+
    "html": {
    "enabled": true,
    "output": "reports/cucumber-report.html"
@@ -36,7 +37,9 @@ Configuracion:
    "output": "reports/log.json"
    }
 
-2. Agregar el _script_ en **package.json** para que se corran los test, "cypress:run:todos": "npx cypress run --e2e --browser chrome -e \"tags=not @ignore\" -s cypress/e2e/features/\*_/_.feature"
+2. Agregar en **package.json**, para que se corran los test, el _script_:
+
+"cypress:run:todos": "npx cypress run --e2e --browser chrome -e \"tags=not @ignore\" -s cypress/e2e/features/\*_/_.feature"
 
 Una vez ejecutemos el script para que se corran los test se generan:
 
