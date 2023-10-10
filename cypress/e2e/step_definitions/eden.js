@@ -57,7 +57,7 @@ Then(
   () => {
     cy.request({
       method: "GET",
-      url: "https://edenapi.edenentradas.com.ar/edenventarestapi/api/contenido/funcion/FUNC022273",
+      url: "https://edenapi.edenentradas.com.ar/edenventarestapi/api/contenido/funcion/FUNC022306",
     }).then((response) => {
       cy.log(response);
       const prices = response.body.Precios;

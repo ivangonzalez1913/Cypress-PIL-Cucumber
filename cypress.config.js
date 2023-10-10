@@ -13,6 +13,7 @@ module.exports = defineConfig({
     COPAARGENTINA_URL: "https://www.copaargentina.org/",
   },
   e2e: {
+    hideXHRInCommandLog: true,
     specPattern: "cypress/e2e/features/**/*.feature",
     async setupNodeEvents(on, config) {
       // implement node event listeners here
